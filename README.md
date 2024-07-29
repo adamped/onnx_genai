@@ -4,6 +4,10 @@
 
 A wrapper around the Microsoft GenAI library that contains the Microsoft ONNX extensions required for interacting with Phi based models.
 
+https://github.com/microsoft/onnxruntime-genai
+
+onnxruntime-genai is required for working with models like Phi-3-mini due to ONNX extensions that aren't available in the base onnxruntime.
+
 ## Getting Started
 
 Initialize the model and tokenizer.
