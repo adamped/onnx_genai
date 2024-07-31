@@ -14,11 +14,11 @@ class Model {
 
   Model(this.genai, this._modelHandle);
 
-  factory Model.create(String modelPath) {
+  factory Model.create(String modelPath, DynamicLibrary lib) {
     Pointer<Pointer<native.OgaModel>> outModelPtrPtr = calloc.allocate(sizeOf<Pointer<Pointer<native.OgaModel>>>()); 
 
     var model = native
-        .onnx_genai(DynamicLibrary.open('assets/libonnxruntime-genai.so'));
+        .onnx_genai(lib);
 
     var result = model.OgaCreateModel(stringToPointer(modelPath), outModelPtrPtr);
 
