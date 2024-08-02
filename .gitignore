@@ -25,5 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
-
+linux/flutter/
+linux/lib/
 assets/
+.vscode/
